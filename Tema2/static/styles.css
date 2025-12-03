@@ -1,0 +1,330 @@
+/* ===========================
+   RESET
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* ===========================
+   NAVBAR GENERAL
+=========================== */
+
+nav {
+    width: 100%;
+    background: #2e7d32; /* Verde campo */
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.8rem 1rem;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   TÍTULOS DE CATEGORÍA (H1)
+=========================== */
+
+h1 {
+    text-align: center;
+    margin: 2rem 0 1.5rem;
+    font-size: 2rem;
+    color: #1b5e20;
+}
+
+/* subtítulos sueltos como "MACHO CASTRADO..." */
+p{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+/* ===========================
+   PRODUCT LIST GRID
+=========================== */
+
+.product-container {
+    max-width: 1100px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.4rem;
+}
+
+/* ===========================
+   PRODUCT CARD
+=========================== */
+
+.product {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem 1rem 1.4rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: all 0.15s ease;
+}
+
+.product:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+}
+
+/* IMÁGENES DE PRODUCTOS
+   - Todas con misma proporción (4:3)
+   - Ocupan todo el ancho de la card
+   - Sin deformarse
+*/
+.product img {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.product h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.product p {
+    font-size: 0.95rem;
+    margin: 0.2rem 0;
+}
+
+/* ===========================
+   AVAILABLE / OUT OF STOCK
+=========================== */
+
+.availability {
+    margin-top: 0.6rem;
+    font-weight: bold;
+    font-size: 0.85rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+.available {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.out-of-stock {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+/* ===========================
+   REGISTER PAGE (FORMS)
+=========================== */
+
+.container {
+    max-width: 500px;
+    margin: 2.5rem auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.12);
+}
+
+.card h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #1b5e20;
+}
+
+.form-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+label {
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="time"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background: #1b5e20;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 480px) {
+    nav {
+        gap: 0.4rem;
+        padding: 0.5rem;
+    }
+
+    nav a {
+        padding: 5px 8px;
+        font-size: 0.85rem;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .product img {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+/* ========= SECCIÓN DEL DASHBOARD: #brands ========= */
+
+#brands {
+    max-width: 1100px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+/* Título "Los Animales Disponibles son" */
+#brands h2 {
+    font-size: 1.5rem;
+    color: #1b5e20;
+    margin-bottom: 1.5rem;
+}
+
+/* Contenedor de las tarjetas de animales del dashboard */
+.brands-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* Tarjeta de cada animal en el dashboard */
+.brand {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1rem;
+    width: 210px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.15s ease;
+}
+
+.brand:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+}
+
+/* Imágenes de los animales en el dashboard
+   mismo criterio que productos
+*/
+.brand img {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 0.6rem;
+}
+
+/* Nombre del animal debajo de la foto */
+.brand p {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #2e7d32;
+}
+
+/* ======================================
+   NAVBAR PARA DASHBOARD (usa <ul>)
+====================================== */
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}

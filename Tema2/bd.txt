@@ -1,0 +1,19 @@
+
+
+docker run -d --name Perfumes -e MYSQL_ROOT_PASSWORD=perfumes123 -p 3307:3306 mysql:8
+
+CREACION DE BD Y TABLA
+
+CREATE DATABASE PERFUMES;
+
+
+CREAR TABLA A UTILIZAR
+
+ CREATE TABLE suscripciones (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    apellido VARCHAR(100) NOT NULL,
+    correo VARCHAR(150) NOT NULL UNIQUE,
+    celular VARCHAR(50) NOT NULL,
+    horario VARCHAR(20) NOT NULL
+);

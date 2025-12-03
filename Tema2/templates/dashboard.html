@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/styles.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/dashboard">Home</a></li>
+        <li><a href="/ternero">TERNERO</a></li>
+        <li><a href="/novillo">NOVILLO</a></li>
+         <li><a href="/novillito">NOVILLITOS</a></li>
+        <li><a href="/vaquillona">VAQUILLONA</a></li>
+        <li><a href="/vaca">VACA</a></li>
+         <li><a href="/toro">TORO</a></li>
+        <li><a href="/register">REGISTRESE</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <h1>LOTES DE ANIMALES DISPONIBLES</h1>
+    </header>
+
+    <section id="brands">
+      <div class="brands-container">
+        <div class="brand">
+          <img
+            src="{{ url_for('static', filename='img/ternero.jpg') }}"
+            alt="TERNEROO"
+          />
+          <p>TERNEROO</p>
+        </div>
+
+        <div class="brand">
+          <img
+            src="{{ url_for('static', filename='img/novillo.jpg') }}"
+            alt="NOVILLO"
+          />
+          <p>NOVILLO</p>
+        </div>
+
+         <div class="brand">
+          <img
+            src="{{ url_for('static', filename='img/novillito.jpg') }}"
+            alt="NOVILLITOS"
+          />
+          <p>NOVILLITOS</p>
+        </div>
+
+         <div class="brand">
+          <img
+            src="{{ url_for('static', filename='img/vaquillona.jpg') }}"
+            alt="VAQUILLONA"
+          />
+          <p>VAQUILLONA</p>
+        </div>
+
+         <div class="brand">
+          <img
+            src="{{ url_for('static', filename='img/vaca.jpg') }}"
+            alt="VACA"
+          />
+          <p>VACA</p>
+        </div>
+
+         <div class="brand">
+          <img
+            src="{{ url_for('static', filename='img/toro.jpg') }}"
+            alt="TORO"
+          />
+          <p>TORO</p>
+        </div>
+
+        </div>
+      </div>
+  </body>
+</html>
