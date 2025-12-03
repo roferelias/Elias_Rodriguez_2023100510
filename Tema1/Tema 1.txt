@@ -1,0 +1,66 @@
+La url de mi repositorio es  https://github.com/roferelias/Elias_Rodriguez_2023100510.git
+
+
+Para crear el contenedor de docker:
+docker run -d --name examanfinal -e MYSQL_ROOT_PASSWORD=admin123 -p 3308:3306 mysql:8
+
+Para crear la bd y la tabla utilizada
+
+Ejecutá esto en MySQL:
+
+CREATE DATABASE ganado;
+
+USE ganado;
+
+CREATE TABLE suscripciones (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    apellido VARCHAR(100) NOT NULL,
+    correo VARCHAR(150) NOT NULL UNIQUE,
+    celular VARCHAR(50) NOT NULL,
+    horario VARCHAR(20) NOT NULL
+);
+
+Para clonar mi repositorio
+Cómo ejecutar el proyecto
+Clonar el repositorio
+git clone https://github.com/TU_USUARIO/TU_REPO.git
+cd TU_REPO
+
+Para subir archivos al git
+nicializar Git en esa carpeta
+
+Ejecutá:
+
+git init
+
+
+Esto crea la carpeta oculta .git, que permite usar versiones y subir a GitHub.
+
+ Agregar todos los archivos al repositorio
+git add .
+
+Esto prepara TODOS los archivos para subirlos.
+
+Si querés agregar solo uno:
+
+git add app.py
+
+Crear el primer commit
+git commit -m "Primer commit: Proyecto de venta de ganado"
+
+Esto guarda la versión actual del proyecto.
+
+GitHub te muestra una URL parecida a:
+
+ https://github.com/roferelias/Elias_Rodriguez_2023100510.git
+
+La agregás con:
+
+git remote add origin https://github.com/roferelias/Elias_Rodriguez_2023100510.git
+
+
+Subir todos los archivos a GitHub
+git push -u origin main
+
+
